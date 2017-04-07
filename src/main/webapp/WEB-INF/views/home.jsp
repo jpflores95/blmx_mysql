@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h3>Address Book App (Using MySQL)</h3>
-	<a href="home?action=new">* New Contact</a>
+	<a href="home?action=new" button type = "submit"class="btn btn-primary">* New Contact</a>
 	<hr>
 	<table>
 		<thead>
@@ -32,7 +32,7 @@
 					</td>
 					<td>
 						<form action="home" method="POST">
-						<input type="submit" value="Convert"></form>
+						<input type="submit" value="Convert" button type = "submit"class="btn btn-primary"></form>
 						
 					</td>
 				</tr>
