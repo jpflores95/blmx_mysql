@@ -30,7 +30,7 @@ public class TextToSpeechService {
 		
 		InputStream stream = service.synthesize(text, Voice.EN_ALLISON, AudioFormat.WAV).execute();
 		InputStream in = WaveUtils.reWriteWaveHeader(stream);
-		OutputStream out = new FileOutputStream("output.wav");
+		//OutputStream out = new FileOutputStream("output.wav");
 		ServletOutputStream out = resp.getOutputStream();
 		
 		byte[] buffer = new byte[1024];
