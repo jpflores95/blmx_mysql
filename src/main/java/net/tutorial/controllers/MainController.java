@@ -69,6 +69,10 @@ public class MainController extends HttpServlet {
 		}
 
 		resp.sendRedirect("home");
+		
+		TextToSpeechService service = new TextToSpeechService();
+		String text = req.getParameter("text");
+		service.getAudio(text, resp);
 	}
 
 }
