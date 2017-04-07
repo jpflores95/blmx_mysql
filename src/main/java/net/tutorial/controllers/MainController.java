@@ -63,12 +63,12 @@ public class MainController extends HttpServlet {
 		record.put("email", email);
 		record.put("mobile", mobile);
 
-		if (id == null) {
-			db.updateRecord(DBService.INSERT_RECORD, record);
-		} else {
-			record.put("_id", Integer.parseInt(id));
-			db.updateRecord(DBService.UPDATE_RECORD, record);
-		}
+		//if (id == null) {
+		//	db.updateRecord(DBService.INSERT_RECORD, record);
+		//} else {
+	//		record.put("_id", Integer.parseInt(id));
+	//		db.updateRecord(DBService.UPDATE_RECORD, record);
+	//	}
 
 		//resp.sendRedirect("home");
 		
