@@ -36,33 +36,14 @@ public class EnvVariables {
 		
 		Map<String, String> creds = new HashMap<String, String>();
 		
-		
-		
 		if (this.hasVcap) {
 			JSONArray serviceConfig = (JSONArray) vcap.get(serviceName);
 	        JSONObject serviceInstance = (JSONObject) serviceConfig.get(0);
 	        JSONObject serviceCreds = (JSONObject) serviceInstance.get("credentials");
-	       
 			
-			//if(serviceName.equals("TextToSpeechService")){
-			creds.put("username",serviceCreds.get("username").toString());
-			creds.put("password",serviceCreds.get("password").toString());
-			//}
-		//	else if(serviceName.equals("cleardb")){
-		//		creds.put("jdbcUrl",serviceCreds.get("jdbcUrl").toString());
-		//	}
-			
-			
-			
+			creds.put("jdbcUrl", serviceCreds.get("jdbcUrl").toString());
 		} else {
-		//	if(serviceName.equals("TextToSpeechService")){
-				creds.put("username",serviceCreds.get("username").toString());
-				creds.put("password",serviceCreds.get("password").toString());
-		//	}
-		//	else if(serviceName.equals("cleardb")){
-		//		creds.put("jdbcUrl",serviceCreds.get("jdbcUrl").toString());
-				
-			//}
+			creds.put("jdbcUrl", "jdbc:mysql://us-cdbr-iron-east-04.cleardb.net/ad_a26915a035fc832?user=b035db40527917&password=61e95ee1"); // Put username here if you are testing in local
 		}
 		
 		return creds;
