@@ -41,22 +41,22 @@ public class EnvVariables {
 	        JSONObject serviceInstance = (JSONObject) serviceConfig.get(0);
 	        JSONObject serviceCreds = (JSONObject) serviceInstance.get("credentials");
 			
-			if(ServiceName.equals("TextToSpeechService")){
+			if(serviceName.equals("TextToSpeechService")){
 			creds.put("username", serviceCreds.get("username").toString());
 			creds.put("password",  serviceCreds.get("password").toString());
 			}
-			else if(ServiceName.equals("cleardb")){
+			else if(serviceName.equals("cleardb")){
 				creds.put("jdbcUrl", serviceCreds.get("jdbcUrl").toString());
 			}
 			
 			
 			
 		} else {
-			if(ServiceName.equals("TextToSpeechService")){
+			if(serviceName.equals("TextToSpeechService")){
 			creds.put("username", serviceCreds.get("username").toString());
 			creds.put("password",  serviceCreds.get("password").toString());
 			}
-			else if(ServiceName.equals("cleardb")){
+			else if(serviceName.equals("cleardb")){
 				creds.put("jdbcUrl", serviceCreds.get("jdbcUrl").toString());
 			}
 		}
