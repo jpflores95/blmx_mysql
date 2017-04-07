@@ -73,8 +73,8 @@ public class MainController extends HttpServlet {
 		//resp.sendRedirect("home");
 		
 		TextToSpeechService service = new TextToSpeechService();
-		String text = name;
-		service.getAudio(text, resp);
+		//String text = name;
+		service.getAudio(name, resp);
 	}
 
 }

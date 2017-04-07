@@ -42,8 +42,14 @@ public class EnvVariables {
 	        JSONObject serviceCreds = (JSONObject) serviceInstance.get("credentials");
 			
 			creds.put("jdbcUrl", serviceCreds.get("jdbcUrl").toString());
+			
+			creds.put("username", serviceCreds.get("username").toString());
+			creds.put("password",  serviceCreds.get("password").toString());
+			
 		} else {
 			creds.put("jdbcUrl", ""); // Put username here if you are testing in local
+			creds.put("username", serviceCreds.get("username").toString());
+			creds.put("password",  serviceCreds.get("password").toString());
 		}
 		
 		return creds;
