@@ -40,7 +40,7 @@ public class EnvVariables {
 			JSONArray serviceConfig = (JSONArray) vcap.get(serviceName);
 	        JSONObject serviceInstance = (JSONObject) serviceConfig.get(0);
 	        JSONObject serviceCreds = (JSONObject) serviceInstance.get("credentials");
-	        JSONObject serviceCreds = (JSONObject) serviceInstance.get("credentials");
+	       
 			
 			if(serviceName.equals("TextToSpeechService")){
 			creds.put("username",serviceCreds.get("username").toString());
