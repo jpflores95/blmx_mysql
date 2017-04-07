@@ -12,13 +12,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import net.tutorial.utilities.DBService;
+import net.tutorial.utilities.DataService;
+
 
 import net.tutorial.utilities.TextToSpeechService;
 
 @WebServlet({ "home", "" })
 public class MainController extends HttpServlet {
 	RequestDispatcher dispatcher;
-	DBService db = null;
+	DataService ds = null;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
