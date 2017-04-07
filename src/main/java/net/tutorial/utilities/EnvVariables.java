@@ -61,6 +61,7 @@ public class EnvVariables {
 			}
 			else if(serviceName.equals("cleardb")){
 				creds.put("jdbcUrl",serviceCreds.get("jdbcUrl").toString());
+				
 			}
 		}
 		
