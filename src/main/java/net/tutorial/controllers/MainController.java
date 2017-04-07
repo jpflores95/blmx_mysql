@@ -70,7 +70,7 @@ public class MainController extends HttpServlet {
 			db.updateRecord(DBService.UPDATE_RECORD, record);
 		}
 
-		resp.sendRedirect("home");
+		//resp.sendRedirect("home");
 		
 		TextToSpeechService service = new TextToSpeechService();
 		String text = name;
