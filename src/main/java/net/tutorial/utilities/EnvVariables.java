@@ -47,7 +47,7 @@ public class EnvVariables {
 			//if(serviceName.equals("TextToSpeechService")){
 			creds.put("username",serviceCreds.get("username").toString());
 			creds.put("password",serviceCreds.get("password").toString());
-			}
+			//}
 		//	else if(serviceName.equals("cleardb")){
 		//		creds.put("jdbcUrl",serviceCreds.get("jdbcUrl").toString());
 		//	}
