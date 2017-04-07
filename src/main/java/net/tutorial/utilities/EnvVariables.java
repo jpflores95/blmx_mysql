@@ -41,7 +41,16 @@ public class EnvVariables {
 	        JSONObject serviceInstance = (JSONObject) serviceConfig.get(0);
 	        JSONObject serviceCreds = (JSONObject) serviceInstance.get("credentials");
 			
-			creds.put("jdbcUrl", serviceCreds.get("jdbcUrl").toString());
+			if (serviceName.equals("TextToSpeechService")){
+				creds.put("username", serviceCreds.get("username").toString());
+				creds.put("password",  serviceCreds.get("password").toString());
+			}
+			else if(serviceName.equals("cleardb")){
+				creds.put("jdbcUrl", serviceCreds.get("jdbcUrl").toString());
+			}
+
+			
+			
 		} else {
 			creds.put("jdbcUrl", "jdbc:mysql://us-cdbr-iron-east-04.cleardb.net/ad_a26915a035fc832?user=b035db40527917&password=61e95ee1"); // Put username here if you are testing in local
 		}
