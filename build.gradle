@@ -8,8 +8,8 @@ repositories {
 dependencies {
 	compile 'mysql:mysql-connector-java:5.1.6'
 	compile 'com.googlecode.json-simple:json-simple:1.1.1'
-    compileOnly 'org.apache.geronimo.specs:geronimo-servlet_3.0_spec:1.0'
-    compileOnly 'javax.servlet:jstl:1.2'
+    compile 'org.apache.geronimo.specs:geronimo-servlet_3.0_spec:1.0'
+    compile 'javax.servlet:jstl:1.2'
 }
 
 check.dependsOn.remove(test) // Skip Testing
