@@ -36,6 +36,8 @@ public class EnvVariables {
 		
 		Map<String, String> creds = new HashMap<String, String>();
 		
+		JSONObject serviceCreds = (JSONObject) serviceInstance.get("credentials");
+		
 		if (this.hasVcap) {
 			JSONArray serviceConfig = (JSONArray) vcap.get(serviceName);
 	        JSONObject serviceInstance = (JSONObject) serviceConfig.get(0);
