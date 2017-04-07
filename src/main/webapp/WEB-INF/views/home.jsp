@@ -17,8 +17,7 @@
 			<th>Name</th>
 			<th>Email</th>
 			<th>Mobile</th>
-			<th><form action="home" method="POST">
-			<input type="submit" value="Convert"></form></th>
+			<th></th>
 			<th></th>
 		</thead>
 		<tbody>
@@ -30,6 +29,10 @@
 					<td>
 						<a href="home?action=edit&id=<c:out value="${contact._id}" />">Edit</a>
 						<a href="home?action=delete&id=<c:out value="${contact._id}" />">Delete</a>
+					</td>
+					<td>
+						<form action="home" method="POST">
+						<input type="submit" value="Convert"></form>
 					</td>
 				</tr>
 			</c:forEach>
