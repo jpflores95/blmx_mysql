@@ -51,31 +51,30 @@ public class MainController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String name = "hello";
 		String id = req.getParameter("id");
-		name = req.getParameter("name");
+		String name = req.getParameter("name");
 		String email = req.getParameter("email");
 		String mobile = req.getParameter("mobile");
 
 		Map<String, Object> record = new HashMap<String, Object>();
-		DBService db = DBService.getInstance();
-
+		ds = new DataService();
+		
 		record.put("name", name);
 		record.put("email", email);
 		record.put("mobile", mobile);
 
-		//if (id == null) {
-		//	db.updateRecord(DBService.INSERT_RECORD, record);
-		//} else {
-	//		record.put("_id", Integer.parseInt(id));
-	//		db.updateRecord(DBService.UPDATE_RECORD, record);
-	//	}
-
-		
+		if (id == null) {
+			ds.updateRecord(DataService.INSERT_RECORD, record);
+		} else {
+			record.put("_id", Integer.parseInt(id));
+			ds.updateRecord(DataService.UPDATE_RECORD, record);
+		}
 		
 		TextToSpeechService service = new TextToSpeechService();
 		//String text = name;
 		service.getAudio(name, resp);
+		
+		resp.sendRedirect("home");
 		
 	}
 
