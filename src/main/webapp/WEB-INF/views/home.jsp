@@ -17,14 +17,14 @@
 			<th>Name</th>
 			<th>Email</th>
 			<th>Mobile</th>
-			<th><p class="action">
-			<input type="submit" value="Convert"></p></th>
+			<th><form action="home" method="POST">
+			<input type="submit" value="Convert"></form></th>
 			<th></th>
 		</thead>
 		<tbody>
 			<c:forEach items="${contacts}" var="contact">
 				<tr>
-					<td><c:out value="${contact.name}" /></td>
+					<td><c:out value="${contact.name}"/></td>
 					<td><c:out value="${contact.email}" /></td>
 					<td><c:out value="${contact.mobile}" /></td>
 					<td>
